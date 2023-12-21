@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeeaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page |</title>
+</head>
+<body>
+    <section class="text-center">
+        <h1>Profile Page</h1>
+        <h3>Name: [[${user.name}]]</h3>
+
+        <h3>Email: [[${user.email}]]</h3>
+        <h3>Mobile No: [[${user.mobileNo}]]</h3>
+
+        <a href="/logout" class="btn btn-primary">Logout</a>
+
+    </section>
+</body>
+</html>
