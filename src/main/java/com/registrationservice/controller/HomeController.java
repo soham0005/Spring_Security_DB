@@ -42,6 +42,14 @@ public class HomeController {
         return "login";
     }
 
+    @GetMapping("/admin/profile")
+    public String adminProfile(Principal p,Model m){
+        String email = p.getName();
+        User user = userRepository.findByEmail(email);
+        m.addAttribute("user",user);
+        return "admin";
+    }
+
     @GetMapping("/user/profile")
     public String profile(Principal p, Model m){
 
